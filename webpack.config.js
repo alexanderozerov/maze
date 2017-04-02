@@ -1,9 +1,9 @@
 'use strict';
 
 module.exports = {
-  entry: '',
+  entry: './src/js/script.js',
   output: {
-    filename: ''
+    filename: './src/build.js'
   },
   watch: true,
   watchOptions: {
