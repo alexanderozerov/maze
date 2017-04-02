@@ -1,6 +1,6 @@
 {
   "name": "maze",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "maze builder and solver",
   "main": "index.js",
   "scripts": {
