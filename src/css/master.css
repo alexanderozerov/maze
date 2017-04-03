@@ -3,9 +3,9 @@ body {
   padding: 0;
 }
 
-svg {
+canvas {
   display: block;
   margin: 10px;
-  width: 800px;
-  height: 600px;
+  padding: 10px;
+  background-color: #eee;
 }
