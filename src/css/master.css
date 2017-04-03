@@ -9,3 +9,12 @@ canvas {
   padding: 10px;
   background-color: #eee;
 }
+
+div {
+  margin: 5px 10px;
+}
+
+button {
+  margin: 0 10px;
+  border-radius: 5px;
+}

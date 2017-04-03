@@ -13,7 +13,7 @@ var mazeSolved = false;
 
 var maze = createMaze(width, height);
 
-function createMaze(w, h) {
+function createMaze(w, h) {  // build matrix
   var result = [];
   for (var x = 0; x < w; x++) {
     result[x] = [];
@@ -38,8 +38,8 @@ startCell.value = '!';
 var stack = [startCell];
 
 
-function solve(tX, tY) {
-  if (startCell.x === tX && startCell.y === tY) {
+function solve() { // show path
+  if (startCell.x === targetX && startCell.y === targetY) {
     startCell.value = '!';
     mazeSolved = true;
     return;
@@ -59,7 +59,7 @@ function solve(tX, tY) {
   }
 }
 
-function build() {
+function build() { // build random naze
   if (stack.length !== 0) {
     var neigbours = getNeigbours(startCell, maze, width, height);
     if (neigbours.length !== 0) {
@@ -86,16 +86,16 @@ function build() {
   }
 }
 
-function removeWall(c1, c2, m) {
+function removeWall(c1, c2, m) { // remove wal between two cells
   var dx = (c1.x + c2.x) / 2;
   var dy = (c1.y + c2.y) / 2;
-  var tX = dx === 0 ? c1.x : dx;
-  var tY = dy === 0 ? c1.y : dy;
-  console.log('removing wall ' + tX + ' ' + tY);
-  m[targetX][targetY].value = '*';
+  var tx = dx === 0 ? c1.x : dx;
+  var ty = dy === 0 ? c1.y : dy;
+  console.log('removing wall ' + tx + ' ' + ty);
+  m[tx][ty].value = '*';
 }
 
-function getNeigbours(c, m, w, h, step = 2) {
+function getNeigbours(c, m, w, h, step = 2) { // return list of neigbours of the cell
   var result = [];
   var up = { x: c.x, y: c.y - step };
   var rt = { x: c.x + step, y: c.y };
@@ -144,7 +144,7 @@ function play() {
   } else {
     text.innerHTML = 'labyrinth builded';
     if (!mazeSolved) {
-      solve(targetX, targetY);
+      solve();
     } else {
       text.innerHTML = 'labyrinth solved';
     }
