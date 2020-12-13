@@ -16,12 +16,5 @@
   "bugs": {
     "url": "https://github.com/alexanderozerov/maze/issues"
   },
-  "homepage": "https://github.com/alexanderozerov/maze#readme",
-  "devDependencies": {
-    "babel-eslint": "^6.1.2",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb-es5": "^1.1.0",
-    "eslint-plugin-react": "^6.10.3",
-    "webpack": "^2.3.2"
-  }
+  "homepage": "https://github.com/alexanderozerov/maze#readme"
 }
